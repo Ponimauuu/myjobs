@@ -1,0 +1,108 @@
+#balance     
+        upstream balancer {
+           server localhost:8080;
+           server localhost:8085;
+       }
+
+#logs
+       log_format custom '$remote_addr - $remote_user '
+                         '"$request" $status $body_bytes_sent ' 
+                         '"$http_referer" "$http_user_agent" '
+                         'proxied to: $proxy_host ';
+#serv1
+server {
+	listen 8080 ;
+	listen [::]:8080;
+
+
+	root /var/www/html;
+
+	index blue.html index.htm index.nginx-debian.html;
+
+	server_name localhost;
+      
+
+}
+
+#serv2
+        server {
+        listen 8085 ;
+        listen [::]:8085;
+
+
+        root /var/www/html;
+
+        index  red.htm index.nginx-debian.html;
+
+        server_name localhost;
+}
+
+
+#osnovnoi
+server {
+
+
+	root /var/www/html;
+
+	index index.html index.htm;
+    server_name hostu.myvnc.com;
+        
+        location ~\.php$ {
+                 proxy_pass http://localhost:8081;
+             proxy_set_header Host $host;
+             proxy_set_header X-Real-Ip $remote_addr;
+        }
+
+        location /secondpage/ {
+                alias /var/www/html/secondpage/;
+                index index.html;
+        }
+
+        location /music {
+                alias /var/www/html/music;
+              add_header Content-Disposition 'attachment; filename="mss.mp3"';
+        }
+
+        location /image1/ {
+                alias /var/www/html/image1/;
+        }
+        
+        location /image2/ {
+                alias /var/www/html/image2/;
+        }
+
+        
+        location /redblue/ {
+                proxy_pass http://balancer;
+           proxy_set_header Host $host;
+           proxy_set_header X-Real-Ip $remote_addr;
+        }
+
+        location ~\.jpg$ {
+                image_filter rotate 180;
+        }
+
+        access_log /var/log/nginx/access.log custom;
+        
+    listen [::]:443 ssl ipv6only=on;
+    listen 443 ssl; 
+    ssl_certificate /etc/letsencrypt/live/hostu.myvnc.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/hostu.myvnc.com/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; 
+
+}
+server {
+    if ($host = hostu.myvnc.com) {
+        return 301 https://$host$request_uri;
+    } 
+
+
+	listen 80 ;
+	listen [::]:80 ;
+    server_name hostu.myvnc.com;
+    return 404;
+
+
+}
+     

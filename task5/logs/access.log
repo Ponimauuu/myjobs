@@ -1,0 +1,20 @@
+37.214.79.50 - - [27/Oct/2023:09:17:30 +0000] "GET / HTTP/1.1" 301 178 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0"
+37.214.79.50 - - "GET / HTTP/1.1" 200 360 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0" proxied to: - 
+37.214.79.50 - - "GET /favicon.ico HTTP/1.1" 404 134 "https://hostu.myvnc.com/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0" proxied to: - 
+37.214.79.50 - - "GET /secondpage HTTP/1.1" 301 178 "https://hostu.myvnc.com/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0" proxied to: - 
+37.214.79.50 - - "GET /secondpage/ HTTP/1.1" 200 143 "https://hostu.myvnc.com/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0" proxied to: - 
+37.214.79.50 - - "GET /music/mss.mp3 HTTP/1.1" 200 655052 "https://hostu.myvnc.com/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0" proxied to: - 
+37.214.79.50 - - "GET /info.php HTTP/1.1" 200 21780 "https://hostu.myvnc.com/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0" proxied to: localhost:8081 
+37.214.79.50 - - "GET /image1/imag1.jpg HTTP/1.1" 200 198795 "https://hostu.myvnc.com/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0" proxied to: - 
+37.214.79.50 - - "GET /image2/imag2.png HTTP/1.1" 200 854379 "https://hostu.myvnc.com/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0" proxied to: - 
+37.214.79.50 - - "GET /redblue HTTP/1.1" 301 178 "-" "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/23.0 Chrome/115.0.0.0 Mobile Safari/537.36" proxied to: - 
+127.0.0.1 - - [27/Oct/2023:09:19:57 +0000] "GET /redblue/ HTTP/1.0" 200 191 "-" "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/23.0 Chrome/115.0.0.0 Mobile Safari/537.36"
+37.214.79.50 - - "GET /redblue/ HTTP/1.1" 200 182 "-" "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/23.0 Chrome/115.0.0.0 Mobile Safari/537.36" proxied to: balancer 
+37.214.79.50 - - "GET /favicon.ico HTTP/1.1" 404 197 "https://hostu.myvnc.com/redblue/" "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/23.0 Chrome/115.0.0.0 Mobile Safari/537.36" proxied to: - 
+127.0.0.1 - - [27/Oct/2023:09:19:58 +0000] "GET /redblue/ HTTP/1.0" 200 189 "-" "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/23.0 Chrome/115.0.0.0 Mobile Safari/537.36"
+37.214.79.50 - - "GET /redblue/ HTTP/1.1" 200 181 "-" "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/23.0 Chrome/115.0.0.0 Mobile Safari/537.36" proxied to: balancer 
+127.0.0.1 - - [27/Oct/2023:09:20:00 +0000] "GET /redblue/ HTTP/1.0" 200 191 "-" "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/23.0 Chrome/115.0.0.0 Mobile Safari/537.36"
+37.214.79.50 - - "GET /redblue/ HTTP/1.1" 200 182 "-" "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/23.0 Chrome/115.0.0.0 Mobile Safari/537.36" proxied to: balancer 
+127.0.0.1 - - [27/Oct/2023:09:20:01 +0000] "GET /redblue/ HTTP/1.0" 200 189 "-" "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/23.0 Chrome/115.0.0.0 Mobile Safari/537.36"
+37.214.79.50 - - "GET /redblue/ HTTP/1.1" 200 181 "-" "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/23.0 Chrome/115.0.0.0 Mobile Safari/537.36" proxied to: balancer 
+37.214.79.50 - - "GET / HTTP/1.1" 200 360 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0" proxied to: - 
